@@ -7,7 +7,7 @@
         <div style="background: green;" class="image">
           <h5><%= activity.name %></h5>
           <p><i class="far fa-calendar"></i> <%= activity.date %></p>
-          <p><i class="far fa-clock"></i> <%= activity.duration %></p>
+          <p><i class="far fa-clock"></i> <%= activity.duration %> mins</p>
         </div>
         <div class="modify">
           <%= link_to '<i class="fas fa-trash"> </i>'.html_safe, activity, method: :delete, data: { confirm: 'Are you sure?' },  :class => "float-right" %>
