@@ -11,27 +11,27 @@
   </head>
 
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="/">Move & Groove</a>
+    <a class="navbar-brand" href="/"><%= image_tag("favicon.png", :width => 30) %> Move & Groove</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarText">
+    <div class="collapse navbar-collapse text-right" id="navbarText">
       <ul class="navbar-nav ml-auto">
       <% if current_user %>
         <li class="nav-item active">
           <a class="nav-link" href="/activities">Activities</a>
         </li>
         <li class="nav-item active">
-          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => "btn btn-outline-secondary" %>
         </li>
-        <% else %>
+      <% else %>
         <li class="nav-item">
-          <%= link_to "Sign up", new_user_registration_path %>
+          <%= link_to "Sign Up", new_user_registration_path, :class => "btn btn-outline-secondary" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Login", new_user_session_path %>
+          <%= link_to "Login", new_user_session_path, :class => "btn btn-outline-secondary" %>
         </li>
-        <% end %>
+      <% end %>
       </ul>
     </div>
   </nav>
@@ -52,43 +52,45 @@
           <!-- Grid column -->
           <div class="col-md-2 mb-3">
             <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">About us</a>
+              <a href="/">About</a>
             </h6>
           </div>
           <!-- Grid column -->
-  
+
+          <% if current_user %>
           <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Products</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Awards</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Help</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-  
-          <!-- Grid column -->
-          <div class="col-md-2 mb-3">
-            <h6 class="text-uppercase font-weight-bold">
-              <a href="#!">Contact</a>
-            </h6>
-          </div>
-          <!-- Grid column -->
-  
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase font-weight-bold">
+                <a href="/activities">Activities</a>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase font-weight-bold">
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+          <% else %>
+            <!-- Grid column -->
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase font-weight-bold">
+              <%= link_to "Sign Up", new_user_registration_path %>
+              </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 mb-3">
+              <h6 class="text-uppercase font-weight-bold">
+                <%= link_to "Login", new_user_session_path %>
+              </h6>
+            </div>
+            <!-- Grid column -->
+          <% end %>
+
         </div>
         <!-- Grid row-->
         <hr class="rgba-white-light" style="margin: 0 15%;">
@@ -98,9 +100,8 @@
   
           <!-- Grid column -->
           <div class="mb-5 col-md-8 col-12 mt-5">
-            <p style="line-height: 1.7rem">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-              aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-              Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur.</p>
+            <p style="line-height: 1.7rem">Move & Groove allows you to track your fitness progress by keeping record of your fitness acitivities. 
+            This sublime interface will give you the motivation you need to improve your everyday physical health. </br>Join the Move & Groove community today!</p>
           </div>
           <!-- Grid column -->
   
@@ -115,12 +116,12 @@
           <div class="col-md-12">
   
             <div class="mb-5 text-center">
-                <i class="fab fa-facebook-f fa-lg mr-4"> </i>
-                <i class="fab fa-twitter fa-lg mr-4"> </i>
-                <i class="fab fa-google-plus-g fa-lg mr-4"> </i>
-                <i class="fab fa-linkedin-in fa-lg mr-4"> </i>
-                <i class="fab fa-instagram fa-lg mr-4"> </i>
-                <i class="fab fa-pinterest fa-lg"> </i>
+                <a class="fab fa-facebook-f fa-lg mr-4 " href="#"> </a>
+                <a class="fab fa-twitter fa-lg mr-4" href="#"> </a>
+                <a class="fab fa-google-plus-g fa-lg mr-4" href="#"> </a>
+                <a class="fab fa-linkedin-in fa-lg mr-4" href="#"> </a>
+                <a class="fab fa-instagram fa-lg mr-4" href="#"> </a>
+                <a class="fab fa-pinterest fa-lg" href="#"> </a>
             </div>
   
           </div>

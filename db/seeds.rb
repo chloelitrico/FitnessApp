@@ -9,14 +9,43 @@
 ActivityType.destroy_all
 
 ActivityType.create([{
+    name: "Hiking",
+    image: "aleks-dahlberg-250686-unsplash.jpg"
+},
+{
     name: "Pilates",
-    image: "Peyton Reed"
+    image: "bruce-mars-556415-unsplash.jpg"
 },
 {
-    name: "Ant-Man",
-    image: "Peyton Reed"
+    name: "Yoga",
+    image: "emily-sea-198689-unsplash.jpg"
 },
 {
-    name: "Ant-Man",
-    image: "Peyton Reed"
-}])
+    name: "Swimming",
+    image: "gentrit-sylejmani-723365-unsplash.jpg"
+},
+{
+    name: "TRX",
+    image: "inspired-horizons-digital-marketing-1275920-unsplash.jpg"
+},
+{
+    name: "Running",
+    image: "jenny-hill-205881-unsplash.jpg"
+},
+{
+    name: "Boxing",
+    image: "mark-adriane-540728-unsplash.jpg"
+},
+{
+    name: "Rowing",
+    image: "matthew-fournier-381082-unsplash.jpg"
+},
+{
+    name: "Cycling",
+    image: "simon-connellan-472036-unsplash.jpg"
+},
+{
+    name: "Lifting",
+    image: "victor-freitas-667495-unsplash.jpg"
+}
+])

@@ -13,7 +13,132 @@
  */
  @import "bootstrap";
 
+ @font-face {
+    font-family: 'Praktika';
+    src: font-url('praktika.otf')
+ }
 
-footer{
-    background-color: orange;
+* {
+    font-family: 'Praktika';
+}
+
+/*    Index     */
+.container-full-bg-index{
+     height:100vh;
+     background: url("lindsay-henwood-47743-unsplash.jpg") center center no-repeat;
+     -webkit-background-size: cover;
+     
+ }
+
+.center {
+    padding: 20% 10% 0 0;
+ }
+.navbar-toggler:focus{
+    outline:none;
+}
+.btn-outline-secondary {
+     color:#fe664e;
+     border-color:#fe664e;
+     margin:2px 5px;
+ }
+.btn-outline-secondary:hover{
+    background-color:#fe664e;
+    border-color:#fe664e;
+}
+a {
+    color:#fe664e;
+}
+a:hover{
+    text-decoration: none;
+    color: #0076c6;
+}
+
+
+/*     Devise    */
+.container-full-bg-devise{
+    height:100vh;
+    background: url("scott-webb-22537-unsplash.jpg") center center no-repeat;
+    -webkit-background-size: cover;
+    text-align: center;
+
+}
+
+.vertical-align {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color:rgba(225,225,225,0.8);
+    width:400px;
+    display: inline-block;
+    padding: 20px;
+}
+
+.submit-button {    
+    
+    background-color: #fff;
+    padding:5px 10px;
+    margin:10px 4px;
+    border-radius: 10px;
+    color:#fe664e;
+    border-color:#fe664e;
+}
+.submit-button:hover {    
+    color:#fff;
+    background-color: #0076c6;
+    border-color:#fff;
+}
+input[type=email], input[type=password], input[type=date], input[type=number] {    
+    width:280px;
+    border-radius: 10px;
+    border-color: #fff;
+    text-align: center;
+}
+
+.devise h2 {
+    color:#fe664e;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+
+
+
+/*     Activities   */
+h3 {
+    color:#fff;
+    text-transform: uppercase;
+    font-size: 60px;
+    font-weight: bolder;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.activity {
+    border: 2px solid #fff;
+    text-align: center;
+    border-radius: 5px;
+    height: 250px;
+    padding:0px;
+    color: #fff;
+}
+.activity .image {
+    height:215px;
+}
+.modify {
+    padding:3px 20px;
+    .float-right {
+        padding:0px 5px;
+    }
+}
+h5{
+    padding:35px 0px;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+.new_activity {
+    height:100vh;
+    background: url("marion-michele-191320-unsplash.jpg") center center no-repeat;
+    -webkit-background-size: cover;
+    text-align: center;
 }

@@ -12,15 +12,18 @@
   <% end %>
 
   <div class="actions">
-    <%= form.label :name %>
+  <div class="field">
+    <%= form.label :name %><br />
     <%= form.collection_select(:activity_type_id, ActivityType.all, :id, :name, {:prompt => 'Select an Acitvity'}, id: "activity_name" ) %>
-
-    <%= form.label :date %>
+</div>
+<div class="field">
+    <%= form.label :date %><br />
     <%= form.date_field :date, id: "activity_date"%>
-
-    <%= form.label :duration %>
+</div>
+<div class="field">
+    <%= form.label :duration %><br />
     <%= form.number_field :duration, id: "activity_duration"%>
-
-    <%= form.submit %>
+</div>
+    <%= form.submit :class => "submit-button" %>
   </div>
 <% end %>
