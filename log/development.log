@@ -22334,3 +22334,151 @@ Processing by PagesController#index as HTML
 Completed 200 OK in 47ms (Views: 44.5ms | ActiveRecord: 0.3ms)
 
 
+  [1m[35m (476.3ms)[0m  [1m[35mCREATE DATABASE "my_database_development" ENCODING = 'utf8'[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (404.8ms)[0m  [1m[35mCREATE DATABASE "my_database_test" ENCODING = 'utf8'[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (28.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (5.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5168794849566389475)[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+Migrating to DeviseCreateUsers (20190315164225)
+  [1m[35m (5.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190315164225_devise_create_users.rb:5
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/migrate/20190315164225_devise_create_users.rb:39
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  ↳ db/migrate/20190315164225_devise_create_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (2.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190315164225"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+Migrating to CreateActivities (20190320142450)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (6.3ms)[0m  [1m[35mCREATE TABLE "activities" ("id" bigserial primary key, "name" character varying, "date" timestamp, "duration" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190320142450_create_activities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190320142450"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+Migrating to CreateActivityTypes (20190320180102)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "activity_types" ("id" bigserial primary key, "name" character varying, "image" character varying)[0m
+  ↳ db/migrate/20190320180102_create_activity_types.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190320180102"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+Migrating to AddUserIdToActivities (20190323110339)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (6.5ms)[0m  [1m[35mALTER TABLE "activities" ADD "user_id" bigint[0m
+  ↳ db/migrate/20190323110339_add_user_id_to_activities.rb:3
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_activities_on_user_id" ON "activities"  ("user_id")[0m
+  ↳ db/migrate/20190323110339_add_user_id_to_activities.rb:3
+  [1m[35m (10.4ms)[0m  [1m[35mALTER TABLE "activities" ADD CONSTRAINT "fk_rails_7e11bb717f"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20190323110339_add_user_id_to_activities.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190323110339"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+Migrating to ChangeNameToActivityTypeId (20190409123802)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "activities" DROP COLUMN "name"[0m
+  ↳ db/migrate/20190409123802_change_name_to_activity_type_id.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "activities" ADD "activity_type_id" integer[0m
+  ↳ db/migrate/20190409123802_change_name_to_activity_type_id.rb:4
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_activities_on_activity_type_id" ON "activities"  ("activity_type_id")[0m
+  ↳ db/migrate/20190409123802_change_name_to_activity_type_id.rb:5
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190409123802"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Create (7.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-16 19:28:04.079815"], ["updated_at", "2019-04-16 19:28:04.079815"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(5168794849566389475)[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/bin/rake:23
+  [1m[36mActivityType Load (0.6ms)[0m  [1m[34mSELECT "activity_types".* FROM "activity_types"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.7ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Hiking"], ["image", "aleks-dahlberg-250686-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Pilates"], ["image", "bruce-mars-556415-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Yoga"], ["image", "emily-sea-198689-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Swimming"], ["image", "gentrit-sylejmani-723365-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "TRX"], ["image", "inspired-horizons-digital-marketing-1275920-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.3ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Running"], ["image", "jenny-hill-205881-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Boxing"], ["image", "mark-adriane-540728-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Rowing"], ["image", "matthew-fournier-381082-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.2ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Cycling"], ["image", "simon-connellan-472036-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mActivityType Create (0.3ms)[0m  [1m[32mINSERT INTO "activity_types" ("name", "image") VALUES ($1, $2) RETURNING "id"[0m  [["name", "Lifting"], ["image", "victor-freitas-667495-unsplash.jpg"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
