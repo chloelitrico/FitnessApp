@@ -4,9 +4,9 @@
 
     <% @activities.each do |activity| %>
       <div class="activity col-lg-3 col-md-4 col-sm-6">
-        <div style="background: green;" class="image">
+        <div style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.5)), url('assets/<%= activity.activity_type.image %>');" class="image">
           <h5><%= activity.name %></h5>
-          <p><i class="far fa-calendar"></i> <%= activity.date %></p>
+          <p><i class="far fa-calendar"></i> <%= activity.date.strftime("%d - %m - %Y") %></p>
           <p><i class="far fa-clock"></i> <%= activity.duration %> mins</p>
         </div>
         <div class="modify">
