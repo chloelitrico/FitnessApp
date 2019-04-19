@@ -22482,3 +22482,367 @@ Migrating to ChangeNameToActivityTypeId (20190409123802)
   ↳ db/seeds.rb:11
   [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
   ↳ db/seeds.rb:11
+Started GET "/" for 127.0.0.1 at 2019-04-16 23:40:41 +0200
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (6.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 896ms (Views: 872.0ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-16 23:40:46 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 79ms (Views: 68.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-16 23:40:47 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJ3Uy5Zd+dstd7jUM1wCOMzsDvlHeE5Jkb6NiY9JPIbgsLc8AuTrl6Q9P0BkxQY11juX9shxeCYyJzssv7ZM8A==", "user"=>{"email"=>"litrico.chloe@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "litrico.chloe@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 15ms (ActiveRecord: 8.6ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vJ3Uy5Zd+dstd7jUM1wCOMzsDvlHeE5Jkb6NiY9JPIbgsLc8AuTrl6Q9P0BkxQY11juX9shxeCYyJzssv7ZM8A==", "user"=>{"email"=>"litrico.chloe@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 192ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-16 23:40:50 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qhxKttb4m58jFLQwL16DjuJpBCtSb2YPdeN2/h668FTOc+VWYvgFFVi5IEi4R7WcsavEa6keOBVnhjZydfKW/g==", "user"=>{"email"=>"litrico.chloe@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "litrico.chloe@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 1.9ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qhxKttb4m58jFLQwL16DjuJpBCtSb2YPdeN2/h668FTOc+VWYvgFFVi5IEi4R7WcsavEa6keOBVnhjZydfKW/g==", "user"=>{"email"=>"litrico.chloe@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 190ms (Views: 50.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-16 23:40:51 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.1ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 59ms (Views: 57.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-16 23:41:00 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqzZDo3moLcCU9LoypajzG8/dFueYGKLJcaJOf7knkudBVPNGSFp3eY18KFIxa7pzAF96siJM0VCxJjxI17DAg==", "user"=>{"email"=>"litrico.chloe@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "litrico.chloe@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "litrico.chloe@gmail.com"], ["encrypted_password", "$2a$11$DEnhMK9kfKVbM9KoACEj3utKR6P3E6lRzMzAgoXtiEPlEGWVWEfGi"], ["created_at", "2019-04-16 21:41:00.220145"], ["updated_at", "2019-04-16 21:41:00.220145"]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 180ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-16 23:41:00 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-16 23:41:02 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (2.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  Rendered activities/index.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 64ms (Views: 42.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2019-04-16 23:41:06 +0200
+Processing by ActivitiesController#new as HTML
+  Rendering activities/new.html.erb within layouts/application
+  [1m[36mActivityType Load (0.6ms)[0m  [1m[34mSELECT "activity_types".* FROM "activity_types"[0m
+  ↳ app/views/activities/_form.html.erb:17
+  Rendered activities/_form.html.erb (29.6ms)
+  Rendered activities/new.html.erb within layouts/application (38.2ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 94ms (Views: 73.9ms | ActiveRecord: 7.8ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2019-04-16 23:41:14 +0200
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9C5CfLxaXqIt8ErshCNu2ATH1HQGbNgxochdw7XfgF47Sfc1lzXrpcc6RdsQtrrQfyjHfcbkFR+iZf0tHLsC6Q==", "activity"=>{"activity_type_id"=>"2", "date"=>"2019-04-17", "duration"=>"23"}, "commit"=>"Create Activity"}
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:28
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:30
+  [1m[36mActivityType Load (1.0ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:30
+  [1m[36mActivity Create (3.7ms)[0m  [1m[32mINSERT INTO "activities" ("date", "duration", "created_at", "updated_at", "user_id", "activity_type_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-04-17 00:00:00"], ["duration", 23], ["created_at", "2019-04-16 21:41:14.147261"], ["updated_at", "2019-04-16 21:41:14.147261"], ["user_id", 1], ["activity_type_id", 2]]
+  ↳ app/controllers/activities_controller.rb:30
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:30
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 28ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-16 23:41:14 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  [1m[36mActivityType Load (0.5ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 48ms (Views: 41.0ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-16 23:41:18 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 51ms (Views: 47.3ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-04-16 23:41:22 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"1QCt0cBZLysP5cPk4G1mna0e8FgqbFt/fG9MZy56Sf6xbwIxdFmxoXRIV5x3dFCP/twwGNEdBWVuCgzrRTIvVA=="}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-16 23:41:22 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 53.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:15:30 +0200
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 447ms (Views: 435.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2019-04-19 10:15:37 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (30.7ms)
+Completed 200 OK in 112ms (Views: 84.1ms | ActiveRecord: 14.7ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2019-04-19 10:15:43 +0200
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+91mR40I7nuhPO2nz04WQzxcS0UHsHKwdPCjAVMCuJQB0aKGbm78FeiHVFNSP7Ur5o6YxniKVPhg06CT9qvbmA==", "user"=>{"email"=>"litrico.chloe@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (10.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "litrico.chloe@gmail.com"], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 182ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:15:44 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 42ms (Views: 39.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-19 10:15:46 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (3.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  [1m[36mActivityType Load (1.6ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (33.7ms)
+Completed 200 OK in 86ms (Views: 56.0ms | ActiveRecord: 11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:15:49 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 60ms (Views: 55.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:21:18 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 288ms (Views: 282.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-19 10:21:21 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  [1m[36mActivityType Load (0.4ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 57ms (Views: 50.2ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/activities/new" for 127.0.0.1 at 2019-04-19 10:21:23 +0200
+Processing by ActivitiesController#new as HTML
+  Rendering activities/new.html.erb within layouts/application
+  [1m[36mActivityType Load (0.3ms)[0m  [1m[34mSELECT "activity_types".* FROM "activity_types"[0m
+  ↳ app/views/activities/_form.html.erb:17
+  Rendered activities/_form.html.erb (26.2ms)
+  Rendered activities/new.html.erb within layouts/application (30.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 76ms (Views: 69.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/activities" for 127.0.0.1 at 2019-04-19 10:21:31 +0200
+Processing by ActivitiesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QFPVwfoeelyUffekpQIYOuZyDNJjk9KwkIvA8YUFWzS7Ig/iOTCh6rFlkQ7lY+xhWdDGIX9kwRsyf0UgC7QK2g==", "activity"=>{"activity_type_id"=>"1", "date"=>"2019-04-19", "duration"=>"42"}, "commit"=>"Create Activity"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:28
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/activities_controller.rb:30
+  [1m[36mActivityType Load (0.5ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:30
+  [1m[36mActivity Create (17.7ms)[0m  [1m[32mINSERT INTO "activities" ("date", "duration", "created_at", "updated_at", "user_id", "activity_type_id") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["date", "2019-04-19 00:00:00"], ["duration", 42], ["created_at", "2019-04-19 08:21:31.288329"], ["updated_at", "2019-04-19 08:21:31.288329"], ["user_id", 1], ["activity_type_id", 1]]
+  ↳ app/controllers/activities_controller.rb:30
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/activities_controller.rb:30
+Redirected to http://localhost:3000/activities
+Completed 302 Found in 32ms (ActiveRecord: 23.3ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-19 10:21:31 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  [1m[36mActivityType Load (0.4ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  [1m[36mActivityType Load (0.2ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-19 10:23:52 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  [1m[36mActivityType Load (0.3ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  [1m[36mActivityType Load (0.2ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (11.2ms)
+Completed 200 OK in 66ms (Views: 51.3ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/activities" for 127.0.0.1 at 2019-04-19 10:27:01 +0200
+Processing by ActivitiesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/activities_controller.rb:7
+  Rendering activities/index.html.erb within layouts/application
+  [1m[36mActivity Load (0.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/activities/index.html.erb:5
+  [1m[36mActivityType Load (0.3ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  [1m[36mActivityType Load (0.3ms)[0m  [1m[34mSELECT  "activity_types".* FROM "activity_types" WHERE "activity_types"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/activities/index.html.erb:7
+  Rendered activities/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 65ms (Views: 58.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:27:03 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:20
+Completed 200 OK in 49ms (Views: 45.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2019-04-19 10:27:14 +0200
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"GGo8U2SxbRT7wX4yrfI+KP2LZbpw9dzloIF1Ko00iyNNhAMKGHdIMOIbKrSR07aqi3HQ326pBRypEiH4cWXwnQ=="}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/chloelitrico/.rbenv/versions/2.4.2/lib/ruby/gems/2.4.0/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:27:14 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 42ms (Views: 38.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2019-04-19 10:27:16 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.8ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.5ms)
+Completed 200 OK in 63ms (Views: 61.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-19 10:27:20 +0200
+Processing by PagesController#index as HTML
+  Rendering pages/index.html.erb within layouts/application
+  Rendered pages/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 60ms (Views: 56.9ms | ActiveRecord: 0.0ms)
+
+
