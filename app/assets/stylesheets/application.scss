@@ -71,7 +71,11 @@ a:hover{
     width:400px;
     display: inline-block;
     padding: 20px;
+    @media only screen and (max-width: 768px) {
+        width:300px;
+    }
 }
+
 
 .submit-button {    
     
@@ -92,6 +96,9 @@ input[type=email], input[type=password], input[type=date], input[type=number] {
     border-radius: 10px;
     border-color: #fff;
     text-align: center;
+    @media only screen and (max-width: 768px) {
+        width:260px;
+    }
 }
 
 .devise h2 {
